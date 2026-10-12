@@ -1,0 +1,34 @@
+{{ define "main" }}
+<div class="wrap">
+<h1>{{ .Params.h1 }}</h1>
+<p class="lead">{{ .Params.lead }}</p>
+<nav class="jump" aria-label="Lista de calculadoras">
+{{- range site.Data.calculadoras }}
+<a href="#{{ .id }}">{{ .curto }}</a>
+{{- end }}
+</nav>
+<div id="calculadoras">
+{{- range $i, $c := site.Data.calculadoras }}
+{{ partial "calculator.html" $c }}
+{{- if in (slice 0 2 5) $i }}
+{{ partial "ad.html" . }}
+{{- end }}
+{{- end }}
+</div>
+<article class="prose">
+{{ .Content }}
+</article>
+{{- with .Params.faq }}
+<section class="faq" aria-labelledby="faq-t">
+<h2 id="faq-t">Perguntas frequentes sobre porcentagem</h2>
+{{- range . }}
+<details><summary>{{ .q }}</summary><p>{{ .a }}</p></details>
+{{- end }}
+</section>
+{{- end }}
+</div>
+{{ end }}
+
+{{ define "scripts" }}
+{{ with resources.Get "js/calc.js" }}{{ $js := . | minify }}<script>{{ $js.Content | safeJS }}</script>{{ end }}
+{{ end }}

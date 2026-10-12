@@ -1,0 +1,95 @@
+- id: quanto-e
+  curto: "Quanto é X% de Y"
+  nome: "Quanto é X% de Y?"
+  descricao: "Descubra o valor de uma porcentagem sobre qualquer número."
+  formula: "resultado = Y × X ÷ 100"
+  partes:
+    - {t: "Quanto é"}
+    - {k: a, l: "Porcentagem", ph: "15", suf: "%"}
+    - {t: "de"}
+    - {k: b, l: "Valor", ph: "200"}
+    - {t: "?"}
+- id: quantos-por-cento
+  curto: "X é quantos % de Y"
+  nome: "X é quantos por cento de Y?"
+  descricao: "Descubra que porcentagem uma parte representa do total."
+  formula: "porcentagem = parte ÷ total × 100"
+  partes:
+    - {k: a, l: "Parte", ph: "30"}
+    - {t: "é quantos por cento de"}
+    - {k: b, l: "Total", ph: "200"}
+    - {t: "?"}
+- id: desconto
+  curto: "Desconto"
+  nome: "Calcular desconto"
+  descricao: "Veja o preço final e quanto você economiza com um desconto percentual."
+  formula: "preço final = preço × (1 − desconto ÷ 100)"
+  partes:
+    - {t: "Preço"}
+    - {k: a, l: "Preço original", ph: "200"}
+    - {t: "com desconto de"}
+    - {k: b, l: "Desconto", ph: "15", suf: "%"}
+- id: aumento
+  curto: "Aumento"
+  nome: "Calcular aumento (acréscimo)"
+  descricao: "Aplique um aumento percentual e veja o valor final."
+  formula: "valor final = valor × (1 + aumento ÷ 100)"
+  partes:
+    - {t: "Valor"}
+    - {k: a, l: "Valor inicial", ph: "200"}
+    - {t: "com aumento de"}
+    - {k: b, l: "Aumento", ph: "10", suf: "%"}
+- id: variacao
+  curto: "Variação percentual"
+  nome: "Variação percentual entre dois valores"
+  descricao: "Calcule quanto um valor subiu ou caiu em porcentagem."
+  formula: "variação = (final − inicial) ÷ inicial × 100"
+  partes:
+    - {t: "De"}
+    - {k: a, l: "Valor inicial", ph: "200"}
+    - {t: "para"}
+    - {k: b, l: "Valor final", ph: "220"}
+- id: valor-total
+  curto: "Valor total"
+  nome: "Descobrir o valor total a partir da parte"
+  descricao: "Se você sabe quanto vale uma porcentagem, encontre o total (100%)."
+  formula: "total = parte ÷ porcentagem × 100"
+  partes:
+    - {k: a, l: "Parte", ph: "42"}
+    - {t: "é"}
+    - {k: b, l: "Porcentagem", ph: "7", suf: "%"}
+    - {t: "de qual número?"}
+- id: margem-markup
+  curto: "Margem e markup"
+  nome: "Margem de lucro e markup"
+  descricao: "Compare o custo com o preço de venda e veja a margem e o markup."
+  formula: "margem = (venda − custo) ÷ venda × 100; markup = (venda − custo) ÷ custo × 100"
+  partes:
+    - {t: "Custo"}
+    - {k: a, l: "Custo", ph: "80"}
+    - {t: "e preço de venda"}
+    - {k: b, l: "Preço de venda", ph: "100"}
+- id: porcentagem-de-porcentagem
+  curto: "Porcentagem de porcentagem"
+  nome: "Porcentagem de porcentagem"
+  descricao: "Calcule um percentual dentro de outro e, se quiser, aplique sobre um valor."
+  formula: "resultado = A% × B% (em decimais, multiplicados)"
+  partes:
+    - {k: a, l: "Primeira porcentagem", ph: "50", suf: "%"}
+    - {t: "de"}
+    - {k: b, l: "Segunda porcentagem", ph: "40", suf: "%"}
+    - {t: "e, opcional, sobre o valor"}
+    - {k: c, l: "Valor (opcional)", ph: "1000"}
+- id: regra-de-tres
+  curto: "Regra de três"
+  nome: "Regra de três simples"
+  descricao: "Encontre o valor que falta em uma proporção direta, inclusive com porcentagens."
+  formula: "x = B × C ÷ A"
+  partes:
+    - {t: "Se"}
+    - {k: a, l: "A", ph: "7"}
+    - {t: "corresponde a"}
+    - {k: b, l: "B", ph: "42"}
+    - {t: ", quanto corresponde a"}
+    - {k: c, l: "C", ph: "100"}
+    - {t: "?"}

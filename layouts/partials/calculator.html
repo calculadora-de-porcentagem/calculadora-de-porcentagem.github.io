@@ -1,0 +1,13 @@
+<section class="calc" id="{{ .id }}" aria-labelledby="h-{{ .id }}" data-calc="{{ .id }}">
+<h2 id="h-{{ .id }}">{{ .nome }}</h2>
+<p class="calc-d">{{ .descricao }}</p>
+<div class="sent">
+{{- range .partes }}
+{{- if .t }}<span>{{ .t }}</span>
+{{- else }}<label class="in"><span class="sr">{{ .l }}</span><input type="text" inputmode="decimal" autocomplete="off" data-k="{{ .k }}" placeholder="{{ .ph }}">{{ with .suf }}<span>{{ . }}</span>{{ end }}</label>
+{{- end }}
+{{- end }}
+</div>
+<output class="res" aria-live="polite"><span>Digite os valores para ver o resultado.</span></output>
+<p class="formula">Fórmula: {{ .formula }}</p>
+</section>

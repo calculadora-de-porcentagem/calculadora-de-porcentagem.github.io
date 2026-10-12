@@ -1,0 +1,3 @@
+{{- with site.Params.adsenseClient -}}
+<script>(function(){var l=0;function go(){if(l)return;l=1;var s=document.createElement("script");s.async=true;s.crossOrigin="anonymous";s.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ . }}";s.onload=function(){document.querySelectorAll("ins.adsbygoogle").forEach(function(){(window.adsbygoogle=window.adsbygoogle||[]).push({})})};document.head.appendChild(s)}["pointerdown","keydown","scroll","touchstart"].forEach(function(e){addEventListener(e,go,{once:true,passive:true})});setTimeout(go,8000)})()</script>
+{{- end -}}

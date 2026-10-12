@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+{{ partial "head.html" . }}
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+{{ partial "navbar.html" . }}
+<main id="conteudo">
+{{ block "main" . }}{{ end }}
+</main>
+{{ partial "footer.html" . }}
+{{ block "scripts" . }}{{ end }}
+{{ partial "ads-loader.html" . }}
+</body>
+</html>

@@ -1,0 +1,23 @@
+{{ define "main" }}
+<div class="wrap term">
+{{ partial "breadcrumb.html" . }}
+<article class="prose">
+<h1>{{ .Params.h1 }}</h1>
+{{ .Content }}
+{{- with .Params.fonte }}
+<p class="src">Fonte: <a href="{{ .url }}" rel="noopener" target="_blank">{{ .nome }}</a></p>
+{{- end }}
+<p class="back">Coloque o conceito em prática: <a href="{{ site.Home.RelPermalink }}#{{ .Params.calc }}">{{ .Params.calcnome }}</a>. Veja também a <a href="{{ site.Home.RelPermalink }}">página inicial da {{ site.Params.siteName }}</a>.</p>
+{{- with .Params.rel }}
+<h2>Termos relacionados</h2>
+<ul class="rel">
+{{- range . }}
+{{- with site.GetPage (printf "/glossario/%s" .) }}
+<li><a href="{{ .RelPermalink }}">{{ .Params.termo }}</a></li>
+{{- end }}
+{{- end }}
+</ul>
+{{- end }}
+</article>
+</div>
+{{ end }}

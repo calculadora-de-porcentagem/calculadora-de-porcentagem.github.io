@@ -1,0 +1,1 @@
+{{- with site.Params.email -}}<a href="mailto:{{ . }}">{{ . }}</a>{{- else -}}{{- warnf "params.email está vazio em hugo.toml" -}}[defina params.email em hugo.toml]{{- end -}}

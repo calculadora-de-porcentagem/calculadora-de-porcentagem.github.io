@@ -1,0 +1,19 @@
+baseURL = "https://calculadora-de-porcentagem.github.io/"
+languageCode = "pt-BR"
+defaultContentLanguage = "pt-br"
+title = "Calculadora de Porcentagem"
+enableRobotsTXT = false
+disableKinds = ["taxonomy", "term", "rss"]
+timeout = "60s"
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+
+[params]
+  siteName = "Calculadora de Porcentagem"
+  # E-mail exibido na página de contato (obrigatório preencher antes de publicar)
+  email = "mariaulfa.bangil@gmail.com"
+  # AdSense: preencha com ca-pub-XXXXXXXXXXXXXXXX e o ID do bloco. Vazio = sem anúncios.
+  adsenseClient = ""
+  adsenseSlot = ""

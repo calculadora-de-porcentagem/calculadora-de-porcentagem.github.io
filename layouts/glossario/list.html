@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="wrap">
+{{ partial "breadcrumb.html" . }}
+<h1>{{ .Params.h1 }}</h1>
+<div class="prose">{{ .Content }}</div>
+{{- range .Pages.GroupByParam "cat" }}
+<section>
+<h2>{{ replaceRE "^[0-9]+\\. " "" (printf "%v" .Key) }}</h2>
+<ul class="terms">
+{{- range .Pages.ByParam "termo" }}
+<li><a href="{{ .RelPermalink }}">{{ .Params.termo }}</a><span>{{ .Params.curta }}</span></li>
+{{- end }}
+</ul>
+</section>
+{{- end }}
+</div>
+{{ end }}

@@ -1,0 +1,49 @@
+{{- $home := site.Home.Permalink -}}
+{{- $orgId := printf "%s#org" $home -}}
+{{- $siteId := printf "%s#website" $home -}}
+{{- $org := dict "@type" "Organization" "@id" $orgId "name" site.Params.siteName "url" $home -}}
+{{- $web := dict "@type" "WebSite" "@id" $siteId "url" $home "name" site.Params.siteName "inLanguage" "pt-BR" "publisher" (dict "@id" $orgId) -}}
+{{- $page := dict "@type" (.Params.schema | default "WebPage") "@id" (printf "%s#webpage" .Permalink) "url" .Permalink "name" .Title "description" .Description "inLanguage" "pt-BR" "isPartOf" (dict "@id" $siteId) "dateModified" (.Lastmod.Format "2006-01-02") -}}
+{{- $graph := slice $org $web $page -}}
+
+{{- if not .IsHome -}}
+  {{- $items := slice -}}
+  {{- $n := 0 -}}
+  {{- range .Ancestors.Reverse -}}
+    {{- $n = add $n 1 -}}
+    {{- $items = $items | append (dict "@type" "ListItem" "position" $n "name" (cond .IsHome "Início" .LinkTitle) "item" .Permalink) -}}
+  {{- end -}}
+  {{- $n = add $n 1 -}}
+  {{- $items = $items | append (dict "@type" "ListItem" "position" $n "name" .LinkTitle "item" .Permalink) -}}
+  {{- $graph = $graph | append (dict "@type" "BreadcrumbList" "itemListElement" $items) -}}
+{{- end -}}
+
+{{- if .IsHome -}}
+  {{- range site.Data.calculadoras -}}
+    {{- $graph = $graph | append (dict "@type" "WebApplication" "name" .nome "description" .descricao "url" (printf "%s#%s" $home .id) "applicationCategory" "UtilitiesApplication" "operatingSystem" "Any" "inLanguage" "pt-BR" "offers" (dict "@type" "Offer" "price" "0" "priceCurrency" "BRL")) -}}
+  {{- end -}}
+  {{- $graph = $graph | append (dict "@type" "Article" "headline" .Title "description" .Description "inLanguage" "pt-BR" "dateModified" (.Lastmod.Format "2006-01-02") "datePublished" (.Date.Format "2006-01-02") "author" (dict "@id" $orgId) "publisher" (dict "@id" $orgId) "mainEntityOfPage" (dict "@id" (printf "%s#webpage" .Permalink))) -}}
+  {{- with .Params.faq -}}
+    {{- $qs := slice -}}
+    {{- range . -}}
+      {{- $qs = $qs | append (dict "@type" "Question" "name" .q "acceptedAnswer" (dict "@type" "Answer" "text" .a)) -}}
+    {{- end -}}
+    {{- $graph = $graph | append (dict "@type" "FAQPage" "mainEntity" $qs) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if eq .Kind "section" -}}
+  {{- $setId := printf "%s#termos" .Permalink -}}
+  {{- $terms := slice -}}
+  {{- range .Pages -}}
+    {{- $terms = $terms | append (dict "@type" "DefinedTerm" "name" .Params.termo "description" .Params.definicao "url" .Permalink "inDefinedTermSet" $setId) -}}
+  {{- end -}}
+  {{- $graph = $graph | append (dict "@type" "DefinedTermSet" "@id" $setId "name" "Glossário de porcentagem" "inLanguage" "pt-BR" "hasDefinedTerm" $terms) -}}
+{{- end -}}
+
+{{- if and .IsPage (eq .Section "glossario") -}}
+  {{- $hub := site.GetPage "/glossario" -}}
+  {{- $graph = $graph | append (dict "@type" "DefinedTerm" "name" .Params.termo "description" .Params.definicao "url" .Permalink "inLanguage" "pt-BR" "inDefinedTermSet" (printf "%s#termos" $hub.Permalink)) -}}
+{{- end -}}
+
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" $graph | jsonify | safeJS }}</script>

@@ -1,0 +1,57 @@
+# Calculadora de Porcentagem
+
+> Calculadoras gratuitas de porcentagem em português do Brasil e um glossário com termos relacionados, com respostas diretas nas primeiras 50 palavras de cada verbete.
+
+## Principais páginas
+
+- [Calculadora de porcentagem](https://calculadora-de-porcentagem.github.io/): 9 calculadoras (quanto é X% de Y, desconto, aumento, variação percentual, margem e markup, regra de três e mais) e artigo explicativo.
+- [Glossário de porcentagem](https://calculadora-de-porcentagem.github.io/glossario/): índice de 39 termos.
+
+## Glossário
+
+- [Porcentagem](https://calculadora-de-porcentagem.github.io/glossario/porcentagem/): Número ou razão expressa como fração de 100.
+- [Razão](https://calculadora-de-porcentagem.github.io/glossario/razao/): Comparação entre duas grandezas por divisão.
+- [Fração](https://calculadora-de-porcentagem.github.io/glossario/fracao/): Parte de um todo, escrita como numerador sobre denominador.
+- [Proporção](https://calculadora-de-porcentagem.github.io/glossario/proporcao/): Igualdade entre duas razões.
+- [Número adimensional](https://calculadora-de-porcentagem.github.io/glossario/numero-adimensional/): Quantidade pura, sem unidade física.
+- [Unidade de medida](https://calculadora-de-porcentagem.github.io/glossario/unidade-de-medida/): Padrão usado para expressar o valor de uma grandeza.
+- [Valor base](https://calculadora-de-porcentagem.github.io/glossario/valor-base/): O total que corresponde a 100% no cálculo.
+- [Sinal de porcentagem (%)](https://calculadora-de-porcentagem.github.io/glossario/sinal-de-porcentagem/): Símbolo que indica 'por cento'.
+- [Por mil (‰)](https://calculadora-de-porcentagem.github.io/glossario/por-mil/): Uma parte em cada 1.000.
+- [Por miríade (‱)](https://calculadora-de-porcentagem.github.io/glossario/por-miriade/): Uma parte em cada 10.000.
+- [Per cent mille (pcm)](https://calculadora-de-porcentagem.github.io/glossario/per-cent-mille/): Uma parte em cada 100.000.
+- [Ponto-base](https://calculadora-de-porcentagem.github.io/glossario/ponto-base/): Um centésimo de ponto percentual (0,01%).
+- [Centivolta](https://calculadora-de-porcentagem.github.io/glossario/centivolta/): Um centésimo de volta completa (3,6°).
+- [Porcentagem de porcentagem](https://calculadora-de-porcentagem.github.io/glossario/porcentagem-de-porcentagem/): Percentual calculado sobre outro percentual.
+- [Regra de três](https://calculadora-de-porcentagem.github.io/glossario/regra-de-tres/): Método para achar um valor desconhecido em uma proporção.
+- [Cálculo mental](https://calculadora-de-porcentagem.github.io/glossario/calculo-mental/): Resolver contas sem calculadora, com atalhos.
+- [Propriedade comutativa](https://calculadora-de-porcentagem.github.io/glossario/propriedade-comutativa/): Trocar a ordem dos fatores não muda o produto.
+- [Probabilidade condicional](https://calculadora-de-porcentagem.github.io/glossario/probabilidade-condicional/): Chance de um evento, dado que outro ocorreu.
+- [Variações percentuais sucessivas](https://calculadora-de-porcentagem.github.io/glossario/variacoes-percentuais-sucessivas/): Aumentos e descontos aplicados em sequência.
+- [Variação percentual](https://calculadora-de-porcentagem.github.io/glossario/variacao-percentual/): Mudança entre dois valores, em % do valor inicial.
+- [Aumento percentual](https://calculadora-de-porcentagem.github.io/glossario/aumento-percentual/): Acréscimo expresso como % do valor inicial.
+- [Redução percentual](https://calculadora-de-porcentagem.github.io/glossario/reducao-percentual/): Queda expressa como % do valor inicial.
+- [Diferença percentual](https://calculadora-de-porcentagem.github.io/glossario/diferenca-percentual/): Comparação simétrica entre dois valores.
+- [Ponto percentual](https://calculadora-de-porcentagem.github.io/glossario/ponto-percentual/): Diferença aritmética entre dois percentuais.
+- [Percentual reverso](https://calculadora-de-porcentagem.github.io/glossario/percentual-reverso/): Variação necessária para desfazer outra.
+- [Taxa de juros](https://calculadora-de-porcentagem.github.io/glossario/taxa-de-juros/): Percentual cobrado ou pago pelo uso do dinheiro.
+- [Markup](https://calculadora-de-porcentagem.github.io/glossario/markup/): Percentual somado ao custo para formar o preço.
+- [Margem de lucro](https://calculadora-de-porcentagem.github.io/glossario/margem-de-lucro/): Parte do preço de venda que vira lucro.
+- [Percentil](https://calculadora-de-porcentagem.github.io/glossario/percentil/): Valor abaixo do qual cai uma % das observações.
+- [Declividade](https://calculadora-de-porcentagem.github.io/glossario/declividade/): Inclinação de rampas, estradas e ferrovias em %.
+- [Tangente](https://calculadora-de-porcentagem.github.io/glossario/tangente/): Razão trigonométrica entre cateto oposto e adjacente.
+- [Percentual de massa](https://calculadora-de-porcentagem.github.io/glossario/percentual-de-massa/): Massa do componente sobre a massa total da mistura.
+- [Percentual molar](https://calculadora-de-porcentagem.github.io/glossario/percentual-molar/): Mols do componente sobre os mols totais da mistura.
+- [Percentual de vitórias](https://calculadora-de-porcentagem.github.io/glossario/percentual-de-vitorias/): Fração das partidas vencidas por uma equipe.
+- [Percentual de arremessos](https://calculadora-de-porcentagem.github.io/glossario/percentual-de-arremessos/): Arremessos convertidos sobre os tentados no basquete.
+- [Média de rebatidas](https://calculadora-de-porcentagem.github.io/glossario/media-de-rebatidas/): Rebatidas válidas sobre vezes ao bastão no beisebol.
+- [Centesima rerum venalium](https://calculadora-de-porcentagem.github.io/glossario/centesima-rerum-venalium/): Imposto romano de 1/100 sobre vendas em leilão.
+- [Per centum](https://calculadora-de-porcentagem.github.io/glossario/per-centum/): Expressão latina que deu origem a 'por cento'.
+- [Sistema Internacional de Unidades](https://calculadora-de-porcentagem.github.io/glossario/sistema-internacional-de-unidades/): Padrão mundial do sistema métrico (SI).
+
+## Institucional
+
+- [Sobre](https://calculadora-de-porcentagem.github.io/sobre/)
+- [Contato](https://calculadora-de-porcentagem.github.io/contato/)
+- [Política de privacidade](https://calculadora-de-porcentagem.github.io/politica-de-privacidade/)
+- [Termos de uso](https://calculadora-de-porcentagem.github.io/termos-de-uso/)

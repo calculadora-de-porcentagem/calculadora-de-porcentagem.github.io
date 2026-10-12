@@ -1,0 +1,9 @@
+{{ define "main" }}
+<div class="wrap">
+{{ partial "breadcrumb.html" . }}
+<article class="prose">
+<h1>{{ .Params.h1 | default .Title }}</h1>
+{{ .Content }}
+</article>
+</div>
+{{ end }}
